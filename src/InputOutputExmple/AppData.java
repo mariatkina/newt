@@ -2,13 +2,13 @@ package InputOutputExmple;
 
 import java.io.*;
 import java.util.Arrays;
-/*1. Реализовать сохранение данных в csv файл;
-2. Реализовать загрузку данных из csv файла. Файл читается целиком.
-Структура csv файла:
-| Строка заголовок с набором столбцов |
-| Набор строк с целочисленными значениями |
-| * Разделитель между столбцами - символ точка с запятой (;) |
-Пример:
+/*1. Р РµР°Р»РёР·РѕРІР°С‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ РґР°РЅРЅС‹С… РІ csv С„Р°Р№Р»;
+2. Р РµР°Р»РёР·РѕРІР°С‚СЊ Р·Р°РіСЂСѓР·РєСѓ РґР°РЅРЅС‹С… РёР· csv С„Р°Р№Р»Р°. Р¤Р°Р№Р» С‡РёС‚Р°РµС‚СЃСЏ С†РµР»РёРєРѕРј.
+РЎС‚СЂСѓРєС‚СѓСЂР° csv С„Р°Р№Р»Р°:
+| РЎС‚СЂРѕРєР° Р·Р°РіРѕР»РѕРІРѕРє СЃ РЅР°Р±РѕСЂРѕРј СЃС‚РѕР»Р±С†РѕРІ |
+| РќР°Р±РѕСЂ СЃС‚СЂРѕРє СЃ С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё |
+| * Р Р°Р·РґРµР»РёС‚РµР»СЊ РјРµР¶РґСѓ СЃС‚РѕР»Р±С†Р°РјРё - СЃРёРјРІРѕР» С‚РѕС‡РєР° СЃ Р·Р°РїСЏС‚РѕР№ (;) |
+РџСЂРёРјРµСЂ:
 Value 1;Value 2;Value 3
 100;200;123
 300,400,500*/
@@ -25,11 +25,11 @@ public class AppData {
     public int[][] getData() {
         return data;
     }
-    //метод побайтовой записи в файл:
+     //РјРµС‚РѕРґ РїРѕР±Р°Р№С‚РѕРІРѕР№ Р·Р°РїРёСЃРё РІ С„Р°Р№Р»:
     public void writeBts(File file){
         byte []b = ";".getBytes();
         byte[]n = "\n".getBytes();
-        //заголовок:
+        //Р·Р°РіРѕР»РѕРІРѕРє:
         try {FileOutputStream fos = new FileOutputStream(file);
             for(int i=0;i<this.getHeader().length;i++){
                 byte[] outHeader = this.getHeader()[i].getBytes();
@@ -37,7 +37,7 @@ public class AppData {
                 fos.write(b);
             }
         } catch (IOException e) {e.printStackTrace();}
-        //данные:
+       //РґР°РЅРЅС‹Рµ:
         try {FileOutputStream fos = new FileOutputStream(file, true);
             for (int i=0;i<this.getData().length;i++){
                 fos.write(n);
@@ -48,7 +48,7 @@ public class AppData {
         }
         }catch (IOException e){e.printStackTrace();}
     }
-    //метод побайтового чтения даных из файла в консоль:
+    //РјРµС‚РѕРґ РїРѕР±Р°Р№С‚РѕРІРѕРіРѕ С‡С‚РµРЅРёСЏ РґР°РЅС‹С… РёР· С„Р°Р№Р»Р° РІ РєРѕРЅСЃРѕР»СЊ:
     public void readBts(File file){
         try (FileInputStream in = new FileInputStream(file)) {
             for(int i=0;i<this.getHeader().length;i++){
@@ -70,10 +70,10 @@ public class AppData {
         File file = new File("src/resources/table.csv");
         AppData appData = new AppData(header, data);
 
-        //реализация записи
+        //СЂРµР°Р»РёР·Р°С†РёСЏ Р·Р°РїРёСЃРё
         appData.writeBts(file);
 
-        //реализация чтения
+        //СЂРµР°Р»РёР·Р°С†РёСЏ С‡С‚РµРЅРёСЏ
         appData.readBts(file);
     }
 }
