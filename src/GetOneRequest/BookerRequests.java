@@ -1,5 +1,6 @@
 package GetOneRequest;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
 
 import java.io.IOException;
@@ -11,7 +12,7 @@ public class BookerRequests {
         String token = "cbed057e5bf693d";
         //postBookng(ohc);
         //getBookingIds(ohc);
-        //getBookingById(ohc);
+        getBookingById(ohc);
         //updateBookng(ohc);
         //partialUpdateBooking(ohc);
         //delBooking(ohc);
@@ -65,8 +66,8 @@ public class BookerRequests {
         System.out.println(booking);
         return booking;
     }
-    //получение запии с указанным Id:
-    public static String getBookingById(OkHttpClient okHttpClient)throws IOException{
+    //получение запии с указанным Id с десериализацией и выводом имени, фамилии и датой выезда:
+    public static BookingClass getBookingById(OkHttpClient okHttpClient)throws IOException{
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://restful-booker.herokuapp.com/booking/41").newBuilder();
         String url = urlBuilder.build().toString();
         Request request = new Request.Builder()
@@ -77,8 +78,10 @@ public class BookerRequests {
         Response response = okHttpClient.newCall(request).execute();
 
         String booking = response.body().string();
-        System.out.println(booking);
-        return booking;
+        ObjectMapper om = new ObjectMapper();
+        BookingClass bC = om.readValue(booking, BookingClass.class);
+        System.out.println(bC.getFirstname()+"\n"+bC.getLastname()+"\n"+bC.getBookingdates());
+        return bC;
     }
     //изменнение записи по Id с передачей всех данных:
     public static String updateBookng(OkHttpClient okHttpClient)throws IOException{

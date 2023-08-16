@@ -1,9 +1,8 @@
 ﻿<component name="libraryTable">
-  <library name="okhttp-4.11.0">
+  <library name="jackson-databind-2.15.2">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/okhttp-4.11.0.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/okio-3.5.0.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/jackson-databind-2.15.2.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/jackson-datatype-jsr310-2.15.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
