@@ -5,7 +5,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import java.io.IOException;
-//С помощью http запроса получить в виде json строки погоду в своем городе oт accuweather.com
+//РЎ РїРѕРјРѕС‰СЊСЋ http Р·Р°РїСЂРѕСЃР° РїРѕР»СѓС‡РёС‚СЊ РІ РІРёРґРµ json СЃС‚СЂРѕРєРё РїРѕРіРѕРґСѓ РІ СЃРІРѕРµРј РіРѕСЂРѕРґРµ oС‚ accuweather.com
 public class AccReq {
     public static void main(String[] args) throws IOException {
         String gelendzhik = "1-288685_1_AL";
