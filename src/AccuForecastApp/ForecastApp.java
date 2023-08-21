@@ -4,14 +4,14 @@ import okhttp3.OkHttpClient;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
-/*сервис получения прогноза погоды с помощью сервиса accuweather api
-в выбранном городе на 1 или 5 дней с записью результата запроса в базу данных*/
+/*Weather forecast service with using accuweather api
+for 1 or 5 days with adding results to the database*/
 public class ForecastApp {
 
     public static void main(String[] args) throws IOException {
         try{
             Forecasts f = new Forecasts();
-            f.deleteFromDB(); //предварительно удаляет все предыдущие записи из базы
+            f.deleteFromDB(); //delete all previous results from datdbase;
             issue(f);
                 f.readFromDB();
         }catch (Exception e){
