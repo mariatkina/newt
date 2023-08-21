@@ -12,11 +12,7 @@ import java.io.IOException;
 public class YandexReq {
     public static void main(String[] args) throws IOException {
         File file = new File("src/resources/yaWeather.json");
-        //writeWethertoFile(file);
-        ObjectMapper objectMapper = new ObjectMapper();
-        //objectMapper.readValue(file, YandexWeather.class);
-        objectMapper.readValue(writeWethertoFile(file), YandexWeather.class);
-
+        writeWethertoFile(file);
 
     }
     public static String writeWethertoFile(File file)throws IOException {

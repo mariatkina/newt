@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//погода в городе
 public class AccReq {
     public static void main(String[] args) throws IOException {
         String gelendzhik = "1-288685_1_AL";
