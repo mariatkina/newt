@@ -7,9 +7,9 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/*1. Написать функцию, принимающую список Student и возвращающую список уникальных курсов, на которые подписаны студенты.
-2. Написать функцию, принимающую на вход список Student и возвращающую список из трех самых любознательных (любознательность определяется количеством курсов).
-3. Написать функцию, принимающую на вход список Student и экземпляр Course, возвращающую список студентов, которые посещают этот курс.*/
+/*1. РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РїСЂРёРЅРёРјР°СЋС‰СѓСЋ СЃРїРёСЃРѕРє Student Рё РІРѕР·РІСЂР°С‰Р°СЋС‰СѓСЋ СЃРїРёСЃРѕРє СѓРЅРёРєР°Р»СЊРЅС‹С… РєСѓСЂСЃРѕРІ, РЅР° РєРѕС‚РѕСЂС‹Рµ РїРѕРґРїРёСЃР°РЅС‹ СЃС‚СѓРґРµРЅС‚С‹.
+2. РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РїСЂРёРЅРёРјР°СЋС‰СѓСЋ РЅР° РІС…РѕРґ СЃРїРёСЃРѕРє Student Рё РІРѕР·РІСЂР°С‰Р°СЋС‰СѓСЋ СЃРїРёСЃРѕРє РёР· С‚СЂРµС… СЃР°РјС‹С… Р»СЋР±РѕР·РЅР°С‚РµР»СЊРЅС‹С… (Р»СЋР±РѕР·РЅР°С‚РµР»СЊРЅРѕСЃС‚СЊ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РєРѕР»РёС‡РµСЃС‚РІРѕРј РєСѓСЂСЃРѕРІ).
+3. РќР°РїРёСЃР°С‚СЊ С„СѓРЅРєС†РёСЋ, РїСЂРёРЅРёРјР°СЋС‰СѓСЋ РЅР° РІС…РѕРґ СЃРїРёСЃРѕРє Student Рё СЌРєР·РµРјРїР»СЏСЂ Course, РІРѕР·РІСЂР°С‰Р°СЋС‰СѓСЋ СЃРїРёСЃРѕРє СЃС‚СѓРґРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рµ РїРѕСЃРµС‰Р°СЋС‚ СЌС‚РѕС‚ РєСѓСЂСЃ.*/
 public class StreamApp {
     static class Student {
         private String name;
@@ -35,7 +35,7 @@ public class StreamApp {
     }
     public static void main(String[] args) {
         List<String> disciplines = new ArrayList<>(Arrays.asList("Mathematics", "Physics", "History", "English Language", "Programming", "Economics", "Chemistry", "Biology", "Art", "Music", "Physical Education", "Geography", "Literature", "Computer Science", "Psychology", "Sociology", "Environmental Science", "Philosophy", "Political Science", "Engineering", "Medicine", "Business Administration", "Linguistics", "Anthropology", "Architecture"));
-        //список Student:
+        //Г±ГЇГЁГ±Г®ГЄ Student:
         List<Student> student = studentList(disciplines);
         System.out.println();
 //1:
