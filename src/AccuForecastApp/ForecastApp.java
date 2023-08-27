@@ -11,7 +11,7 @@ public class ForecastApp {
     public static void main(String[] args) throws IOException {
         try{
             Forecasts f = new Forecasts();
-            f.deleteFromDB(); //delete all previous results from datdbase;
+            f.deleteFromDB(); //delete all previous results from database;
             issue(f);
                 f.readFromDB();
         }catch (Exception e){
