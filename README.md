@@ -13,6 +13,7 @@ Here is a collection of my works and practice tasks for JavaCore:
   8. package JDBCTraining - training for creating tables and writing data to the database using SQLite;
   9. package AccuForecastApp - creation of a service for displaying a weather forecast for 1 or 5 days in the requested city with the result recorded in the database (using accuweather api);
   10. package StreamExamples - examples of solving tasks using Stream api;
+  11. all created files, databases, Json files are collected in the folder "resources";
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (RU):
 Здесь собраны мои работы и тренировочные задания по JavaCore:
@@ -26,3 +27,4 @@ Here is a collection of my works and practice tasks for JavaCore:
   8. package JDBCTraining - тренировка создания таблиц и записи данных в БД;
   9. package AccuForecastApp - создание сервиса для вывода прогноза погоды на 1 или 5 дней в запрашиваемом городе с записью результата в БД (с использованием accuweather api);
   10. package StreamExamples - примеры решения задач с использованием Stream api;
+  11. все создаваемые файлы, базы данных, файлы Json собраны в папке resources;
